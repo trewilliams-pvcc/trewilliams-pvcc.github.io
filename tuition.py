@@ -69,11 +69,12 @@ def display_results():
     global tuition_amt,inst_fee,act_fee,cap_fee,total,balance,scholarship
     currency = '8,.2f'
     line = '-------------------------------'
-
+    dt_full = str(datetime.datetime.now())
+    dt_short = dt_full[0:16]
     print(line)
     print('**** PIEDMONT VIRGINIA COMM COLLEGE ****')
     print('    Tuition and Fees Report')
-    print(str(datetime.datetime.now()))
+    print('     date/time', dt_short)
     print(line)
     print('Tuition            $ ' + format(tuition_amt,currency))
     print('Institutional fee  $ ' + format(inst_fee,currency))
@@ -81,8 +82,9 @@ def display_results():
     print('Capital fee        $ ' + format(cap_fee,currency))
     print('Scholarship        $ ' + format(scholarship,currency))
     print('Total              $ ' + format(total,currency))
+    print(line)
     print('Balance            $ ' + format(balance,currency))
-    
+    print(line)
 
 
 #### Call on main program to execute
